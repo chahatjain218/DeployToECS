@@ -1,0 +1,6 @@
+@DeployToAWS_HostAddress = http://localhost:5015
+
+GET {{DeployToAWS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
