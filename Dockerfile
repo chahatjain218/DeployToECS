@@ -9,7 +9,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["CICD/DeployToECS/DeployToAWS/DeployToAWS.csproj", "DeployToAWS/"]
+COPY ["DeployToAWS/DeployToAWS.csproj", "DeployToAWS/"]
 RUN dotnet restore "./DeployToAWS/DeployToAWS.csproj"
 COPY . .
 WORKDIR "/src/DeployToAWS"
